@@ -4,8 +4,6 @@
  */
 package com.mycompany.pcbuilcalc;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author excee
@@ -15,20 +13,6 @@ public class Calc extends javax.swing.JFrame {
     /**
      * Creates new form Calc
      */
-    String namaPelanggan, 
-            nomorPelanggan, 
-            alamatPelanggan, 
-            processor, 
-            storage0, 
-            storage1, 
-            pilihProcessor, 
-            pilihMotherboard, 
-            pilihRam, 
-            pilihGraphiccard, 
-            pilihPsu, 
-            pilihStorage0, 
-            pilihStorage1;
-
     public Calc() {
         initComponents();
     }
@@ -42,9 +26,6 @@ public class Calc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        groupProcessor = new javax.swing.ButtonGroup();
-        groupStorage0 = new javax.swing.ButtonGroup();
-        groupStorage1 = new javax.swing.ButtonGroup();
         txtTools = new javax.swing.JLabel();
         rbIntel = new javax.swing.JRadioButton();
         rbAMD = new javax.swing.JRadioButton();
@@ -54,6 +35,7 @@ public class Calc extends javax.swing.JFrame {
         cmbMobo = new javax.swing.JComboBox<>();
         txtram = new javax.swing.JLabel();
         cmbRam = new javax.swing.JComboBox<>();
+        rbRam = new javax.swing.JRadioButton();
         txtvga = new javax.swing.JLabel();
         cmbvga = new javax.swing.JComboBox<>();
         txtpsu = new javax.swing.JLabel();
@@ -82,21 +64,17 @@ public class Calc extends javax.swing.JFrame {
         chckmonitor = new javax.swing.JCheckBox();
         chckkursi = new javax.swing.JCheckBox();
         chckmic = new javax.swing.JCheckBox();
-        btnSetuju = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         txtTools.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 24)); // NOI18N
         txtTools.setText("PC Build Tools");
 
-        groupProcessor.add(rbIntel);
         rbIntel.setText("Intel");
 
-        groupProcessor.add(rbAMD);
         rbAMD.setText("AMD");
 
         txtProci.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
@@ -120,6 +98,8 @@ public class Calc extends javax.swing.JFrame {
 
         cmbRam.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        rbRam.setText("Dual Channel");
+
         txtvga.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         txtvga.setText("Graphic Card");
 
@@ -136,16 +116,12 @@ public class Calc extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel3.setText("Storage 1");
 
-        groupStorage0.add(rbhdd0);
         rbhdd0.setText("HDD");
 
-        groupStorage0.add(rbssd0);
         rbssd0.setText("SSD");
 
-        groupStorage1.add(rbhdd1);
         rbhdd1.setText("HDD");
 
-        groupStorage1.add(rbssd1);
         rbssd1.setText("SSD");
 
         cmbstor0.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -193,227 +169,184 @@ public class Calc extends javax.swing.JFrame {
         chckmonitor.setText("Monitor");
 
         chckkursi.setText("Gaming Chair");
-        chckkursi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckkursiActionPerformed(evt);
-            }
-        });
 
         chckmic.setText("Mic + Arm");
-        chckmic.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chckmicActionPerformed(evt);
-            }
-        });
 
-        btnSetuju.setText("Cek");
-        btnSetuju.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSetujuActionPerformed(evt);
-            }
-        });
+        jButton1.setText("Setuju dan Pesan");
 
         jButton2.setText("Hapus");
 
         jButton3.setText("Keluar");
 
-        jCheckBox1.setText("Dual Channel");
-
-        jButton1.setText("Pesan");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(269, 269, 269)
-                .addComponent(txtTools)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 103, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtbundle)
+                            .addComponent(txtcase)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2)
+                            .addComponent(txtpsu)
+                            .addComponent(txtvga)
+                            .addComponent(txtram)
+                            .addComponent(jLabel1)
+                            .addComponent(txtProci))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtram)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jCheckBox1))
-                            .addComponent(txtvga))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cmbRam, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cmbvga, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtpsu)
-                                .addGap(126, 126, 126)
-                                .addComponent(cmbpsu, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel1)
-                                    .addGap(57, 57, 57)
-                                    .addComponent(cmbMobo, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(27, 27, 27)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txttelp)
-                                            .addComponent(txtpelanggan))
-                                        .addGap(31, 31, 31)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(tftelp)
-                                            .addComponent(tfpelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(txtalamat)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(txtProci)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(rbIntel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rbAMD)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(cmbProci, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnSetuju)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(51, 51, 51)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 30, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(rbhdd0)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGap(18, 18, 18)
                                         .addComponent(rbssd0))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(rbhdd1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(rbssd1)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cmbstor1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cmbstor0, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtcase)
-                                .addGap(47, 47, 47)
-                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(txtbundle)
-                                .addGap(29, 29, 29)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(rbssd1))
                                     .addComponent(chckkibot)
                                     .addComponent(chckspeaker))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(chckmouse)
-                                    .addComponent(chckmonitor))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(26, 26, 26)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cmbstor0, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(cmbstor1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(8, 8, 8)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(chckmouse)
+                                            .addComponent(chckmonitor))
+                                        .addGap(55, 55, 55)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(chckmic)
+                                            .addComponent(chckkursi)
+                                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rbAMD)
+                                    .addComponent(rbIntel)
+                                    .addComponent(rbRam))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tfpelanggan)
+                                    .addComponent(cmbpsu, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cmbvga, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cmbRam, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cmbMobo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cmbProci, 0, 314, Short.MAX_VALUE)
+                                    .addComponent(tftelp)
+                                    .addComponent(jScrollPane1)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(123, 123, 123)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(chckmic)
-                                    .addComponent(chckkursi))))
-                        .addGap(0, 93, Short.MAX_VALUE)))
-                .addContainerGap())
+                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton1)))
+                .addGap(54, 54, 54))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtalamat)
+                            .addComponent(txttelp)
+                            .addComponent(txtpelanggan)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(269, 269, 269)
+                        .addComponent(txtTools)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(txtTools)
-                .addGap(33, 33, 33)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(txttelp))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tfpelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtpelanggan))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tftelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtpelanggan)
+                    .addComponent(tfpelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txttelp)
+                    .addComponent(tftelp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtalamat)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rbIntel)
+                            .addComponent(txtProci))
+                        .addGap(17, 17, 17)
+                        .addComponent(rbAMD))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(cmbProci, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rbIntel)
-                    .addComponent(cmbProci, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rbAMD)
-                    .addComponent(txtProci)
+                    .addComponent(jLabel1)
+                    .addComponent(cmbMobo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtram)
+                    .addComponent(rbRam)
+                    .addComponent(cmbRam, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(49, 49, 49)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtvga)
+                    .addComponent(cmbvga, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtpsu)
+                    .addComponent(cmbpsu, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(rbhdd0)
                     .addComponent(rbssd0)
                     .addComponent(cmbstor0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(cmbMobo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3)
-                        .addComponent(rbhdd1)
-                        .addComponent(rbssd1)
-                        .addComponent(cmbstor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
-                .addGap(11, 11, 11)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbRam, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(rbhdd1)
+                    .addComponent(rbssd1)
+                    .addComponent(cmbstor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtcase)
-                    .addComponent(jCheckBox1)
-                    .addComponent(txtram)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtbundle)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtvga)
-                                    .addComponent(cmbvga, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtpsu)
-                                    .addComponent(cmbpsu, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(41, 41, 41)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnSetuju, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(chckkibot)
-                            .addComponent(chckmouse)
-                            .addComponent(chckkursi))
-                        .addGap(7, 7, 7)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(chckspeaker)
-                            .addComponent(chckmonitor)
-                            .addComponent(chckmic))))
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtbundle)
+                    .addComponent(chckkibot)
+                    .addComponent(chckmouse)
+                    .addComponent(chckkursi))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(chckspeaker)
+                    .addComponent(chckmonitor)
+                    .addComponent(chckmic))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void chckkibotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckkibotActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chckkibotActionPerformed
 
     private void cmbProciActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbProciActionPerformed
         // TODO add your handling code here:
@@ -423,67 +356,9 @@ public class Calc extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tftelpActionPerformed
 
-    private void btnSetujuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSetujuActionPerformed
+    private void chckkibotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckkibotActionPerformed
         // TODO add your handling code here:
-        namaPelanggan = tfpelanggan.getText();
-        nomorPelanggan = tftelp.getText();
-        alamatPelanggan = taAlamat.getText();
-
-        //        processor
-        pilihProcessor = cmbProci.getSelectedItem().toString();
-
-        if (rbIntel.isSelected()) {
-            processor = "Intel";
-        } else {
-            processor = "AMD";
-        }
-
-        //        motherboard
-        pilihMotherboard = cmbMobo.getSelectedItem().toString();
-
-        //        Ram
-        pilihRam = cmbRam.getSelectedItem().toString();
-
-        //        graphiccard
-        pilihGraphiccard = cmbvga.getSelectedItem().toString();
-
-        //        psu
-        pilihPsu = cmbpsu.getSelectedItem().toString();
-
-        //        Storage0
-        if (rbhdd0.isSelected()) {
-            storage0 = "HDD";
-        } else {
-            storage0 = "SSD";
-        }
-
-        pilihStorage0 = cmbstor0.getSelectedItem().toString();
-
-        //        Storage0
-        if (rbhdd1.isSelected()) {
-            storage1 = "HDD";
-        } else {
-            storage1 = "SSD";
-        }
-
-        pilihStorage1 = cmbstor1.getSelectedItem().toString();
-    }//GEN-LAST:event_btnSetujuActionPerformed
-
-    private void chckkursiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckkursiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chckkursiActionPerformed
-
-    private void chckmicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chckmicActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chckmicActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        namaPelanggan = JOptionPane.showInputDialog(this, "Masukkan nama kamu ");
-        nomorPelanggan = JOptionPane.showInputDialog(this, "Masukkan nomor telephone ");
-
-        JOptionPane.showMessageDialog(this, "Hallo Aku " + namaPelanggan);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_chckkibotActionPerformed
 
     /**
      * @param args the command line arguments
@@ -511,13 +386,6 @@ public class Calc extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Calc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -528,7 +396,6 @@ public class Calc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSetuju;
     private javax.swing.JCheckBox chckkibot;
     private javax.swing.JCheckBox chckkursi;
     private javax.swing.JCheckBox chckmic;
@@ -542,13 +409,9 @@ public class Calc extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbstor0;
     private javax.swing.JComboBox<String> cmbstor1;
     private javax.swing.JComboBox<String> cmbvga;
-    private javax.swing.ButtonGroup groupProcessor;
-    private javax.swing.ButtonGroup groupStorage0;
-    private javax.swing.ButtonGroup groupStorage1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -556,6 +419,7 @@ public class Calc extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JRadioButton rbAMD;
     private javax.swing.JRadioButton rbIntel;
+    private javax.swing.JRadioButton rbRam;
     private javax.swing.JRadioButton rbhdd0;
     private javax.swing.JRadioButton rbhdd1;
     private javax.swing.JRadioButton rbssd0;
